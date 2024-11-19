@@ -9,6 +9,9 @@
 </head>
 <body>
   <header class="container text-center">
+     <div aria-colspan="dark-mode">
+      <button id="drak-mode-toggle" class="dark-mode-btn">Modo escuro</button>
+     </div>
     <img src="images.png" alt="imagem" class="rounded-circle" width="150" height="150">
     <p class="lead">Eu sou Aluno</p>
     <h1>Sou estudante de programação</h1>
@@ -189,5 +192,19 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+    <script>
+      const toggleButton = document.gotElementById('dark-mode-toggle');
+      const body = document.body;
+
+      toggleButton.addEventListener('clik', function() {
+        body.classList.toggle('dark-mode');
+
+        if (body.classList.contains('dark-mode')){
+          toggleButton.textContent = 'Mode Claro';
+        }else {
+          toggleButton.textContent = 'modo escuro';
+        }
+      })
+    </script>
+  </body>
 </html>
